@@ -182,8 +182,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="gNy-or-wSv">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" id="hy1-HH-5c2"/>
-                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="fko-9t-nKl"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="hy1-HH-5c2">
+                            <connections>
+                                <segue destination="cAb-Bp-Nr6" kind="unwind" unwindAction="unwindSegueWithSegue:" id="VGR-F0-0dU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="fko-9t-nKl">
+                            <connections>
+                                <segue destination="cAb-Bp-Nr6" kind="unwind" identifier="save" unwindAction="unwindSegueWithSegue:" id="Ax3-WS-7dd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionTextF" destination="9ej-YR-fDO" id="RNg-hn-ET6"/>
@@ -193,6 +201,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4GA-ud-Yit" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cAb-Bp-Nr6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2344.9275362318845" y="167.41071428571428"/>
         </scene>
